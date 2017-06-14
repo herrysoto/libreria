@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-2.5.xsd 
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+<!-- **********************************************************************************************************************************-->  
+<!-- CONFIGURACIÓN BÁSICA -->  
+<!-- **********************************************************************************************************************************-->  
+
+	<!-- Inicializar contexto anotaciones. Es para que reconozca las anotaciones de la instancia. @Autowired, @Qualifier, @Resource -->
+	<context:annotation-config />
+	
+	<!-- 
+		Inicializar escaneador de anotaciones a nivel de clases como @Component, @Service, @Repository.
+		Se tiene que poner un paquete base que escanee los demás paquetes que estan por dentro del paquete base. (Obligatorio)
+		Usando JBoss 5 o 5.1 sale error es un bugs de JBoss. Usando Tomcat no hay ningún problema
+	-->
+	<context:component-scan base-package="com.vilibrary" />
+
+
+</beans>
