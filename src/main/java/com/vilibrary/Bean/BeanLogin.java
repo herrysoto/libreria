@@ -1,4 +1,4 @@
-package com.vilibary.Bean;
+package com.vilibrary.Bean;
 
 import lombok.Data;
 

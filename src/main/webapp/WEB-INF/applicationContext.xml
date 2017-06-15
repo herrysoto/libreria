@@ -23,6 +23,6 @@
 		Usando JBoss 5 o 5.1 sale error es un bugs de JBoss. Usando Tomcat no hay ningún problema
 	-->
 	<context:component-scan base-package="com.vilibrary" />
-
+	<bean name="/bienvenido" class="com.vilibrary.Actions.ActionBienvenido" />
 
 </beans>
